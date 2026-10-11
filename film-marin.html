@@ -6,283 +6,52 @@
   <title>aya hamdan</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://use.typekit.net/vnq6jfd.css">
-
-  <style>
-
-    body {
-      font-family: futura-pt, sans-serif;
-      font-weight: 300;
-      font-style: normal;
-      margin: 0;
-      background-color: #f5f3f0;
-    }
-
-    /* Button Style */
-    button, input[type="submit"], input[type="reset"] {
-      background: none;
-      color: inherit;
-      font: inherit;
-      cursor: pointer;
-      border: none;
-      padding: none;
-      outline: none;
-      margin: none;
-    }
-
-    /* Link Styles */
-    a:link {
-      color: black;
-      background-color: transparent;
-      text-decoration: none;
-    }
-    a:visited {
-      color: black;
-      background-color: transparent;
-      text-decoration: none;
-    }
-    a:hover {
-      color: #cec7b9;
-      background-color: transparent;
-      text-decoration: none;
-    }
-    a:active {
-      color: #c03219;
-      background-color: transparent;
-      text-decoration: none;
-    }
-
-    /* Style of the navigation bar */
-    .topnav {
-      overflow: hidden;
-      background-color: transparent;
-      margin-left: 40px;
-    }
-
-    /* Style the navigation bar links */
-    .topnav a {
-      float: left;
-      color: black;
-      text-align: left;
-      padding-top: 39px;
-      padding-bottom: 10px;
-      padding-right: 10px;
-      padding-left: 10px;
-      font-size: 13.8px;
-      text-decoration: none;
-    }
-
-    /* Dropdown container - needed to position the dropdown content */
-    .dropdown {
-      float: left;
-      overflow: hidden;
-      align-items: left;
-      text-align: left;
-    }
-
-    /* Style the dropdown button to fit inside the topnav */
-    .dropdown .dropbtn {
-      color: black;
-      text-align: left;
-      padding-top: 39px;
-      padding-bottom: 10px;
-      padding-right: 5px;
-      padding-left: 10px;
-      font-size: 13.8px;
-      text-decoration: none;
-    }
-
-    /* Style the dropdown content (hidden by default) */
-    .dropdown-content {
-      display: none;
-      text-align: left;
-      position: absolute;
-      z-index: 101;
-    }
-
-    /* Style the links inside the dropdown */
-    .dropdown-content a {
-      float: none;
-      color: black;
-      text-decoration: none;
-      display: block;
-      padding: 4px 10px;
-      background-color: #f5f3f0;
-      text-align: left;
-    }
-
-    /* Show the dropdown menu when the user moves the mouse over the dropdown button */
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    /* Style the topnav links and the dropdown button on hover */
-    .topnav a:hover, .dropdown:hover .dropbtn {
-      color: #cec7b9;
-      background-color: #f5f3f0;
-      text-decoration: none;
-    }
-
-    /* Style the dropdown links on hover */
-    .dropdown-content a:hover {
-      color: #cec7b9;
-      background-color: #f5f3f0;
-      text-decoration: none;
-    }
-
-    /* Style the topnav links and the dropdown button on active */
-    .topnav a:active, .dropdown:active .dropbtn {
-      color: #c03219;
-      background-color: #f5f3f0;
-      text-decoration: none;
-    }
-
-    /* Style the dropdown links on active */
-    .dropdown-content a:active {
-      color: #c03219;
-      background-color: #f5f3f0;
-      text-decoration: none;
-    }
-
-
-    /* Header/logo Title */
-    .header {
-      top: 10px;
-      padding-bottom: 0px;
-      right: 50px;
-      left: 50px;
-      text-align: center;
-      background: none;
-      color: black;
-    }
-
-    /* Increase the font size of the heading */
-    .header h1 {
-      font-size: 28px;
-      font-weight: 400;
-      padding-top: 10px;
-      padding-bottom: 0;
-      border-bottom: 0;
-      margin-bottom: 0;
-      position: fixed;
-      width: 100%;
-      z-index: 100;
-      text-align: center;
-    }
-
-    /* Center an image */
-    .center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      padding-bottom: 150px;
-      width: 50%;
-    }
-
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Sen:wght@400..800&family=Tiny5&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
 
 </head>
 
-
 <body>
 
+   <!-- Sidebar loads directly via script -->
+   <script src="sidebar.js"></script>
 
-  <div class="topnav" id="myTopnav">
-    <div class="dropdown">
-      <button class="dropbtn">Film
-        <i class="fa fa-caret-down"></i>
-      </button>
-          <div class="dropdown-content">
-        <a href="/film-marin.html">Briny</a>
-        <a href="/film-moutarde.html">Mustardy</a>        
-	      <a href="/film-citronne.html">Acidic</a>
-        <a href="/film-carbonise.html">Charred</a>
-        <a href="/film-gras.html">Oily</a>
-        <a href="/film-menthole.html">Minty</a>                                                       
-        <a href="/film-cremeux.html">Creamy</a>
-        <a href="/film-sale.html">Salty</a>                                                               
-        <a href="/film-epice.html">Spiced</a>
-        <a href="/film-doux.html">Mild</a>
-        <a href="/film-piquant.html">Hot</a>
-        <a href="/film-sucre.html">Sweet</a>
-        <a href="/film-seche.html">Sun-dried</a>                                                                  
-        <a href="/film-poivre.html">Peppery</a>
-        <a href="/film-amer.html">Bitter</a>
-      </div>
-
-
-    </div>
-
-    <div class="dropdown">
-      <button class="dropbtn">iPhone
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="/home1.html">Home (1)</a>
-        <a href="/feelslikehome1.html">Feels Like Home (1)</a>
-        <a href="/home2.html">Home (2)</a>
-        <a href="/feelslikehome2.html">Feels Like Home (2)</a>
-        <a href="/home3.html">Home (3)</a>
-        <a href="/feelslikehome3.html">Feels Like Home (3)</a>
-        <a href="/home4.html">Home (4)</a>
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <button class="dropbtn">Freetime
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="/illustration.html">Illustration</a>
-      </div>
-    </div>
+  <!-- ── Gallery ── -->
+  <div class="gallery">
     
-    <a href="/info.html", style="float: right; padding-right: 40px;">Info</a>
+    <div class="image image-large center">
+      <img src="./Film/20.239-min.jpg" alt="Routine">
+    </div>
 
-  </div>
-  
+    <div class="image image-small right offset-up">
+      <img src="./Film/20.258-min.jpg" alt="Greasy">
+    </div>
+
+    <div class="image image-medium center offset-up">
+      <img src="./Film/20.256-min.jpg" alt="Stacked">
+    </div>
+
+    <div class="image image-small left offset-up offset-down">
+      <img src="./Film/20.219-min copy.jpg" alt="Squint">
+    </div>
+
+    <div class="image image-medium right offset-up">
+      <img src="./Film/sporting.jpg" alt="Caution: Wet Floor">
+    </div>
+
+    <div class="image image-large right">
+      <img src="./Film/Lebanon-6.jpg" alt="Long day">
+    </div>
+
+    <div class="image image-medium left">
+      <img src="./Film/raouche2.jpg" alt="Raouche">
+    </div>
 
 
-
-  <div class="header">
-    <a href="/index.html">
-      <h1>aya hamdan</h1>
-    </a>
-  </div>
-
-
-
-  <div class="image">
-    <img src="./Film/8.8-min.jpg" alt="Afternoon Swim", 
-    style="position: relative; left: 19%; width: 46%; padding-top: 63.5px; padding-bottom:94px">
-  </div>
-
-  <div class="image">
-    <img src="./Film/8.20-min.jpg" alt="Flat", 
-    style="position: relative; left: 37%; width: 49%; padding-bottom: 94px;">
-  </div>
-
-  <div class="image">
-    <img src="./Film/9.1-min.jpg" alt="White Beach", 
-    style="position: static; width: 36.4%; padding-left: 10%; padding-bottom:32%;">
-
-    <img src="./Film/9.5-min.jpg" alt="Tired", 
-    style="position: relative; padding-left: 100px; padding-top: 94px; width: 42%;">
-  </div>
-
-  <div class="image">
-    <img src="./Film/9.2-min.jpg" alt="Just left", 
-    style="position: relative; left: 27%; width: 39%; padding-top: 94px;">
-  </div>
-
-  <div class="image">
-    <img src="./Film/9.7-min.jpg" alt="Time to Pack Up", 
-    style="position: relative; padding-left: 14%; padding-top: 26%; width: 33%; padding-bottom: 200px">
-    
-    <img src="./Film/9.4-min.jpg" alt="A Better Place", 
-    style="position: static; width: 39%; padding-left: 100px; padding-bottom:40%; padding-top: 94px;">
   </div>
 
 </body>
-
 
 </html>

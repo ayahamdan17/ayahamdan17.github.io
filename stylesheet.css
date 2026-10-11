@@ -1,0 +1,316 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: "Cormorant Garamond";
+  font-weight: 300;
+  font-style: normal;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+a { color: black; text-decoration: none; }
+a:hover  { color: #aed3c5; }
+a:active { color: #94002c; }
+
+
+/* ─────────────────────────────────────
+   DESKTOP SIDEBAR
+───────────────────────────────────── */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 100vh;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  z-index: 200;
+  background-color: #ffffff;
+}
+
+/* +5 sizes: was 15px → 20px */
+.sidebar-title {
+  font-family: "Tiny5";
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
+  line-height: 1.3;
+  color: black;
+  display: block;
+}
+.sidebar-title:hover { color: #aed3c5; }
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.sidenav > .nav-item { position: relative; }
+
+.sidenav .nav-link,
+.sidenav .nav-btn {
+  display: block;
+  font-size: 13px;
+  color: black;
+  padding: 5px 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-weight: inherit;
+  text-align: left;
+  width: 100%;
+}
+.sidenav .nav-link:hover,
+.sidenav .nav-btn:hover  { color: #aed3c5; }
+.sidenav .nav-link:active,
+.sidenav .nav-btn:active { color: #94002c; }
+
+.dropdown-panel {
+  display: none;
+  flex-direction: column;
+  padding-left: 10px;
+  margin-bottom: 4px;
+}
+.dropdown-panel.open { display: flex; }
+.dropdown-panel a { font-size: 12px; padding: 3px 0; color: black; }
+.dropdown-panel a:hover  { color: #aed3c5; }
+.dropdown-panel a:active { color: #94002c; }
+
+/* No arrows on sidebar nav buttons */
+
+.sidebar-footer { margin-top: auto; padding-top: 20px; }
+.sidebar-footer a { font-size: 12px; color: black; }
+.sidebar-footer a:hover { color: #aed3c5; }
+
+
+/* ─────────────────────────────────────
+   MOBILE FIXED HEADER BAR
+   52px tall, fixed. Never moves.
+───────────────────────────────────── */
+.mobile-header {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 5px;
+  right: 5px;
+  height: 70px;
+  align-items: center;
+  padding: 0 16px;
+  background: #ffffff;
+  z-index: 400;
+}
+
+/* +5 sizes: was 15px → 20px. Matches desktop sidebar title. */
+.mobile-header-title {
+  font-family: "Tiny5";
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  line-height: 1;
+  /* Keep title vertically centred in the 52px bar regardless of viewport */
+  flex-shrink: 0;
+}
+.mobile-header-title:hover { color: #aed3c5; }
+
+
+/* ─────────────────────────────────────
+   MEATBALL MENU — three square dots
+   Same 52px height context as title so they share the same x-line.
+───────────────────────────────────── */
+.hamburger {
+  display: flex;
+  margin-left: auto;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-direction: row;          /* horizontal dots */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+/* Square dots */
+.hamburger span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  background: black;
+  border-radius: 0;             /* square */
+  transition: opacity 0.2s ease;
+}
+.hamburger.open span { background: black; }
+
+
+/* ─────────────────────────────────────
+   MOBILE MENU — overlay panels
+───────────────────────────────────── */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 52px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 350;
+  background: #ffffff;
+  overflow: hidden;
+}
+.mobile-menu.open { display: block; }
+
+/* Both panels are absolutely positioned and fill the space.
+   Panel 2 sits on top; toggled via .visible */
+.menu-panel {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  padding: 40px 24px 40px 24px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+/* Panel 2 hidden by default, shown on top when .visible */
+#panel2 {
+  display: none;
+  z-index: 1;
+}
+#panel2.visible { display: flex; }
+
+/* Panel 1 items */
+.panel1-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 14px;
+  color: black;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-weight: inherit;
+  width: 100%;
+  text-align: left;
+}
+.panel1-item:hover { color: #aed3c5; }
+
+.panel1-info {
+  display: block;
+  padding: 10px 0;
+  font-size: 14px;
+  color: black;
+}
+.panel1-info:hover { color: #aed3c5; }
+
+/* Panel 2 */
+.panel2-back {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: black;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-weight: inherit;
+  padding: 0 0 24px 0;
+  text-align: left;
+}
+.panel2-back:hover { color: #aed3c5; }
+
+.panel2-title {
+  font-size: 14px;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.panel2-links { display: flex; flex-direction: column; }
+.panel2-links a {
+  font-size: 12px;
+  padding: 5px 0;
+  color: black;
+  display: block;
+}
+.panel2-links a:hover  { color: #aed3c5; }
+.panel2-links a:active { color: #94002c; }
+
+
+/* ─────────────────────────────────────
+   GALLERY
+───────────────────────────────────── */
+.gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Desktop: left offset for sidebar; top padding aligns first image with sidebar title */
+  padding: 53px 60px 200px calc(180px + 60px);
+}
+
+.image { margin-bottom: 0; position: relative; }
+.image img { width: 100%; height: auto; display: block; }
+
+.image-large  { width: 65%; margin: 0 auto 25px auto; }
+.image-large.left  { margin-left: 0; margin-right: auto; }
+.image-large.right { margin-left: auto; margin-right: 0; }
+
+.image-medium { width: 45%; margin-bottom: 20px; }
+.image-medium.left   { margin-left: 8%;  margin-right: auto; }
+.image-medium.right  { margin-left: auto; margin-right: 8%; }
+.image-medium.center { margin-left: auto; margin-right: auto; }
+
+.image-small { width: 35%; margin-bottom: 15px; }
+.image-small.left   { margin-left: 5%;  margin-right: auto; }
+.image-small.right  { margin-left: auto; margin-right: 5%; }
+.image-small.center { margin-left: auto; margin-right: auto; }
+
+.offset-up   { margin-top: -10px; }
+.offset-down { margin-top:  40px; }
+
+
+/* ─────────────────────────────────────
+   RESPONSIVE — mobile ≤ 768px
+───────────────────────────────────── */
+@media (max-width: 768px) {
+  .sidebar       { display: none; }
+  .mobile-header { display: flex; }
+
+  .gallery {
+    /* top = header bar height so first image top = title top */
+    padding: 52px 20px 150px 20px;
+  }
+
+  .image-large {
+    width: 70%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+  }
+
+  .image-medium {        
+    width: 55%;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+
+  .image-small {
+    width: 40%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+
+  .offset-up   { margin-top: -5px; }
+  .offset-down { margin-top:  30px; }
+}
