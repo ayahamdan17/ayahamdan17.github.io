@@ -9,8 +9,8 @@ body {
 }
 
 a { color: black; text-decoration: none; }
-a:hover  { color: #aed3c5; }
-a:active { color: #94002c; }
+a:hover  { color: #535353; }
+a:active { color: #530019; }
 
 
 /* ─────────────────────────────────────
@@ -40,7 +40,7 @@ a:active { color: #94002c; }
   color: black;
   display: block;
 }
-.sidebar-title:hover { color: #aed3c5; }
+.sidebar-title:hover { color: #535353; }
 
 .sidenav {
   display: flex;
@@ -65,9 +65,9 @@ a:active { color: #94002c; }
   width: 100%;
 }
 .sidenav .nav-link:hover,
-.sidenav .nav-btn:hover  { color: #aed3c5; }
+.sidenav .nav-btn:hover  { color: #535353; }
 .sidenav .nav-link:active,
-.sidenav .nav-btn:active { color: #94002c; }
+.sidenav .nav-btn:active { color: #530019; }
 
 .dropdown-panel {
   display: none;
@@ -77,14 +77,14 @@ a:active { color: #94002c; }
 }
 .dropdown-panel.open { display: flex; }
 .dropdown-panel a { font-size: 12px; padding: 3px 0; color: black; }
-.dropdown-panel a:hover  { color: #aed3c5; }
-.dropdown-panel a:active { color: #94002c; }
+.dropdown-panel a:hover  { color: #535353; }
+.dropdown-panel a:active { color: #530019; }
 
 /* No arrows on sidebar nav buttons */
 
 .sidebar-footer { margin-top: auto; padding-top: 20px; }
 .sidebar-footer a { font-size: 12px; color: black; }
-.sidebar-footer a:hover { color: #aed3c5; }
+.sidebar-footer a:hover { color: #535353; }
 
 
 /* ─────────────────────────────────────
@@ -199,7 +199,7 @@ a:active { color: #94002c; }
   width: 100%;
   text-align: left;
 }
-.panel1-item:hover { color: #aed3c5; }
+.panel1-item:hover { color: #535353; }
 
 .panel1-info {
   display: block;
@@ -207,7 +207,7 @@ a:active { color: #94002c; }
   font-size: 14px;
   color: black;
 }
-.panel1-info:hover { color: #aed3c5; }
+.panel1-info:hover { color: #535353; }
 
 /* Panel 2 */
 .panel2-back {
@@ -224,7 +224,7 @@ a:active { color: #94002c; }
   padding: 0 0 24px 0;
   text-align: left;
 }
-.panel2-back:hover { color: #aed3c5; }
+.panel2-back:hover { color: #535353; }
 
 .panel2-title {
   font-size: 14px;
@@ -240,8 +240,8 @@ a:active { color: #94002c; }
   color: black;
   display: block;
 }
-.panel2-links a:hover  { color: #aed3c5; }
-.panel2-links a:active { color: #94002c; }
+.panel2-links a:hover  { color: #535353; }
+.panel2-links a:active { color: #530019; }
 
 
 /* ─────────────────────────────────────
