@@ -138,7 +138,7 @@ document.write(`
         ['Interior [Dorset Villa, 2]', '/tangley2.html'],
         ['Interior [Clapton House]',   '/pondhouse.html'],
         ['Boutique [Roksanda, 1]',             '/roksanda1.html'],
-        ['Boutique [Roksanda, 2]',             '/roksanda1.html'],
+        ['Boutique [Roksanda, 2]',             '/roksanda2.html'],
         ['Gallery [Béton Brut, 1]',             '/bb1.html'],
         ['Gallery [Béton Brut, 2]',             '/bb2.html'],
       ],
